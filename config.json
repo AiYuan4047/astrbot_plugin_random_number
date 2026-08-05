@@ -1,0 +1,8 @@
+{
+    "default_min": 1,
+    "default_max": 100,
+    "default_count": 1,
+    "max_count": 100,
+    "lottery_default_count": 1,
+    "lottery_exclude_admin": true
+}
