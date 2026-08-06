@@ -1,6 +1,6 @@
 name: astrbot_plugin_random_number
 display_name: 随机数生成器
 description: 一个简单的随机数生成插件，支持自定义最小值、最大值和生成数量，还能成员抽奖。
-version: v1.0.0
+version: v1.1.0
 author: AiYuan4047
 repo: https://github.com/user/astrbot_plugin_random_number
