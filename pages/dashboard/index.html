@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随机数插件管理</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- 顶部统计栏（点击切换） -->
+        <div class="stats-bar" id="statsBar">
+            <div class="stat-card active" data-module="" onclick="switchModule(this, '')">
+                <div class="stat-value" id="statTotal">-</div>
+                <div class="stat-label">总计</div>
+            </div>
+            <div class="stat-card" data-module="random_number" onclick="switchModule(this, 'random_number')">
+                <div class="stat-value" id="statRandomNumber">-</div>
+                <div class="stat-label">随机数</div>
+            </div>
+            <div class="stat-card" data-module="coin_flip" onclick="switchModule(this, 'coin_flip')">
+                <div class="stat-value" id="statCoinFlip">-</div>
+                <div class="stat-label">抛硬币</div>
+            </div>
+            <div class="stat-card" data-module="member_lottery" onclick="switchModule(this, 'member_lottery')">
+                <div class="stat-value" id="statMemberLottery">-</div>
+                <div class="stat-label">成员抽奖</div>
+            </div>
+        </div>
+
+        <!-- 记录列表视图 -->
+        <div id="listView" class="view active">
+            <div class="view-header">
+                <h2 id="listTitle">全部记录</h2>
+                <button class="btn btn-danger" onclick="showClearConfirm()">清空记录</button>
+                <button class="btn btn-refresh" onclick="loadData()">刷新</button>
+            </div>
+            <div class="table-wrap">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>用户</th>
+                            <th>模块</th>
+                            <th>请求</th>
+                            <th>结果</th>
+                            <th>来源</th>
+                            <th>时间</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recordTableBody">
+                        <tr><td colspan="7" class="loading">加载中...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 记录详情视图 -->
+        <div id="recordDetailView" class="view">
+            <div class="view-header">
+                <button class="btn btn-back" onclick="backToList()">← 返回列表</button>
+                <h2>记录详情</h2>
+            </div>
+            <div class="record-detail-content" id="recordDetailContent">
+            </div>
+        </div>
+
+        <!-- 确认弹窗 -->
+        <div id="confirmModal" class="modal">
+            <div class="modal-content">
+                <h3 id="confirmTitle">确认</h3>
+                <div class="modal-body">
+                    <p id="confirmMessage"></p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-cancel" onclick="closeConfirm()">取消</button>
+                    <button class="btn btn-danger" id="confirmOkBtn">确定</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 提示 -->
+        <div id="toast" class="toast"></div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
