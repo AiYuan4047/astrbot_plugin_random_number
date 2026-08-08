@@ -1,0 +1,7 @@
+name: astrbot_plugin_random_number
+display_name: 随机数生成器
+desc: 随机数生成插件，支持自定义范围、批量生成、掷骰子和群成员抽奖，带WebUI管理面板
+short_desc: 随机数/掷骰子/群成员抽奖，支持WebUI面板配置和记录查看
+version: 3.0.0
+author: AiYuan4047
+repo: https://github.com/user/astrbot_plugin_random_number

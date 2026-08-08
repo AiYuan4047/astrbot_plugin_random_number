@@ -1,0 +1,50 @@
+{
+  "default_min": {
+    "description": "默认最小值",
+    "type": "int",
+    "default": 1,
+    "hint": "不输入最小值时使用的默认最小值"
+  },
+  "default_max": {
+    "description": "默认最大值",
+    "type": "int",
+    "default": 100,
+    "hint": "不输入最大值时使用的默认最大值"
+  },
+  "default_count": {
+    "description": "默认生成数量",
+    "type": "int",
+    "default": 1,
+    "hint": "不输入数量时使用的默认生成数量"
+  },
+  "max_count": {
+    "description": "最大生成数量限制",
+    "type": "int",
+    "default": 100,
+    "hint": "单次生成随机数的最大数量上限"
+  },
+  "lottery_default_count": {
+    "description": "抽奖默认人数",
+    "type": "int",
+    "default": 1,
+    "hint": "成员抽奖不填人数时的默认抽取人数"
+  },
+  "lottery_exclude_admin": {
+    "description": "抽奖默认排除管理员",
+    "type": "bool",
+    "default": true,
+    "hint": "开启后成员抽奖默认排除管理员和群主"
+  },
+  "store_history": {
+    "description": "存储使用记录",
+    "type": "bool",
+    "default": true,
+    "hint": "是否将每次使用记录存储到数据库，供 WebUI 面板查看（仅QQ平台）"
+  },
+  "history_retention_days": {
+    "description": "记录保留天数",
+    "type": "int",
+    "default": 30,
+    "hint": "超过该天数的历史记录将被自动清理，0为永久保留"
+  }
+}
